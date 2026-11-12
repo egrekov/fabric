@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лавка.Доллс — ткани и материалы для авторских кукол и рукоделия</title>
+  <meta name="description" content="Интернет-магазин тканей и материалов для творчества: коллекционный хлопок, лён, трикотаж, фурнитура. Доставка по России, оплата онлайн.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23C4704F'/%3E%3Ctext x='16' y='21.5' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23FAF6F0'%3EЛ%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     Бегущая строка (акции и анонсы)
+============================================================ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>Новая коллекция «Осень 2026» уже в продаже</span>
+    <span>✂</span>
+    <span>Бесплатная доставка при заказе от 5 000 ₽</span>
+    <span>✂</span>
+    <span>Распродажа флиса и меха — до −50%</span>
+    <span>✂</span>
+    <span>Собственные коллекции тканей ЛавкаДоллс</span>
+    <span>✂</span>
+    <span>Новая коллекция «Осень 2026» уже в продаже</span>
+    <span>✂</span>
+    <span>Бесплатная доставка при заказе от 5 000 ₽</span>
+    <span>✂</span>
+    <span>Распродажа флиса и меха — до −50%</span>
+    <span>✂</span>
+    <span>Собственные коллекции тканей ЛавкаДоллс</span>
+    <span>✂</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     Шапка
+============================================================ -->
+<header class="header" id="header">
+  <div class="header__top">
+    <div class="container header__top-inner">
+      <p class="header__note">Вдохновляем и публикуем новости
+        <a href="#" class="link-underline">в ВКонтакте</a>
+      </p>
+      <nav class="header__top-nav" aria-label="Служебные страницы">
+        <a href="#delivery">Доставка</a>
+        <a href="#faq">Вопрос-ответ</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#">О магазине</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container header__main">
+    <button class="icon-btn header__burger" id="burgerBtn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="drawer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+
+    <a class="logo" href="#" aria-label="Лавка.Доллс — на главную">
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="6.5" r="2.6"/><circle cx="6.5" cy="17.5" r="2.6"/><path d="M8.8 8.3 19 19M19 5 8.8 15.7"/></svg>
+      </span>
+      <span class="logo__text"><span class="logo__name">Лавка<em>.Доллс</em></span><small>ткани для рукоделия</small></span>
+    </a>
+
+    <button class="catalog-btn" id="catalogBtn" type="button" aria-expanded="false" aria-controls="catalogPanel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <span>Каталог</span>
+    </button>
+
+    <form class="search" role="search" action="#">
+      <svg class="search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input class="search__input" type="search" name="q" placeholder="Найти: хлопок, лён, шплинты…" aria-label="Поиск по каталогу">
+      <button class="search__submit" type="submit">Найти</button>
+    </form>
+
+    <a class="header__phone" href="tel:+74959795332">
+      <strong>+7 (495) 979-53-32</strong>
+      <small>пн–пт, 10:00–18:00</small>
+    </a>
+
+    <div class="header__actions">
+      <a class="icon-btn" href="#" aria-label="Войти">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c.8-3.4 3.6-5.2 7-5.2s6.2 1.8 7 5.2"/></svg>
+      </a>
+      <a class="icon-btn" href="#" aria-label="Избранное" id="favBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+        <span class="count-badge" data-count="fav">0</span>
+      </a>
+      <a class="icon-btn" href="#" aria-label="Корзина" id="cartBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 10V6.8A3 3 0 0 1 12 4a3 3 0 0 1 3 2.8V10"/></svg>
+        <span class="count-badge" data-count="cart">0</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Выпадающая панель каталога -->
+  <div class="catalog-panel" id="catalogPanel" hidden>
+    <div class="container catalog-panel__grid">
+      <div class="catalog-panel__col">
+        <h3>Ткани</h3>
+        <a href="#">Коллекционные ткани ЛавкаДоллс</a>
+        <a href="#">Ткани для тела</a>
+        <a href="#">Ткани для одежды</a>
+        <a href="#">Наборы тканей</a>
+        <a href="#">Льняные ткани для дома</a>
+      </div>
+      <div class="catalog-panel__col">
+        <h3>Фурнитура и инструменты</h3>
+        <a href="#">Диски, шплинты, глазки</a>
+        <a href="#">Пуговицы, кнопки, пряжки</a>
+        <a href="#">Ленты, кружева, рюши</a>
+        <a href="#">Бирки и термонаклейки</a>
+        <a href="#">Инструменты</a>
+      </div>
+      <div class="catalog-panel__col">
+        <h3>Прочее</h3>
+        <a href="#">Пряжа, нитки, мулине</a>
+        <a href="#">Трессы и мех</a>
+        <a href="#">Сертификаты и книги</a>
+        <a href="#" class="is-sale">Распродажа</a>
+      </div>
+      <div class="catalog-panel__promo">
+        <figure class="swatch pat-dots" style="--pat-c:#C4704F"></figure>
+        <h3>Коллекция «Осень»</h3>
+        <p>Новые наборы хлопка из 6 отрезов в тёплой гамме</p>
+        <a href="#" class="btn btn--ghost btn--sm">Смотреть</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     Мобильное меню
+============================================================ -->
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Меню" aria-hidden="true">
+  <div class="drawer__head">
+    <span class="drawer__title">Меню</span>
+    <button class="icon-btn" id="drawerClose" type="button" aria-label="Закрыть меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <nav class="drawer__nav">
+    <a href="#categories">Каталог</a>
+    <a href="#products">Новинки</a>
+    <a href="#" class="is-sale">Распродажа</a>
+    <a href="#delivery">Доставка</a>
+    <a href="#faq">Вопрос-ответ</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#">О магазине</a>
+  </nav>
+  <div class="drawer__foot">
+    <a href="tel:+74959795332"><strong>+7 (495) 979-53-32</strong></a>
+    <a href="mailto:9795332@bk.ru">9795332@bk.ru</a>
+    <p>пн–пт, 10:00–18:00</p>
+  </div>
+</aside>
+
+<main>
+
+  <!-- ============================================================
+       Hero — слайдер
+  ============================================================ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__frame">
+
+        <article class="hero-slide is-active">
+          <div class="hero-slide__content">
+            <p class="eyebrow">Кураторский ассортимент с 2013 года</p>
+            <h1 class="hero-slide__title">Ткани для автор­ских кукол <em>и игрушек</em></h1>
+            <p class="hero-slide__text">Коллекционный хлопок, лён и трикотаж — мы тестируем каждый материал, прежде чем предложить его мастерам ручной работы.</p>
+            <div class="hero-slide__cta">
+              <a href="#categories" class="btn btn--primary">В каталог
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+              <a href="#products" class="btn btn--ghost">Новинки сезона</a>
+            </div>
+            <dl class="hero-slide__stats">
+              <div><dt>12 лет</dt><dd>на рынке рукоделия</dd></div>
+              <div><dt>4 800+</dt><dd>товаров в каталоге</dd></div>
+              <div><dt>4.9</dt><dd>средняя оценка</dd></div>
+            </dl>
+          </div>
+          <div class="hero-slide__art">
+            <figure class="swatch pat-stripes is-tall"   style="--pat-c:#C4704F"><figcaption>Хлопок «Розы барокко»</figcaption></figure>
+            <figure class="swatch pat-dots"              style="--pat-c:#8A9B6E"><figcaption>Лён «Прованс»</figcaption></figure>
+            <figure class="swatch pat-gingham"           style="--pat-c:#B99B6B"><figcaption>Фланель «Nature»</figcaption></figure>
+            <span class="hero-chip hero-chip--a">✓ Ткани протестированы вручную</span>
+            <span class="hero-chip hero-chip--b">★ Свой бренд с 2018 года</span>
+          </div>
+        </article>
+
+        <article class="hero-slide">
+          <div class="hero-slide__content">
+            <p class="eyebrow">Лимитированная коллекция</p>
+            <h2 class="hero-slide__title">Купоны и постеры <em>«Курочки»</em></h2>
+            <p class="hero-slide__text">Постеры на хлопке и холсте для интерьерных игрушек и домашнего декора. Плотная ткань, качественная прокраска.</p>
+            <div class="hero-slide__cta">
+              <a href="#categories" class="btn btn--primary">Смотреть коллекцию
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+              <a href="#products" class="btn btn--ghost">Все постеры</a>
+            </div>
+            <dl class="hero-slide__stats">
+              <div><dt>140+</dt><dd>купонов в коллекции</dd></div>
+              <div><dt>21×28</dt><dd>и другие размеры</dd></div>
+              <div><dt>хлопок</dt><dd>и натуральный холст</dd></div>
+            </dl>
+          </div>
+          <div class="hero-slide__art">
+            <figure class="swatch pat-scallop is-tall" style="--pat-c:#B99B6B"><figcaption>Постер «Дед Мороз»</figcaption></figure>
+            <figure class="swatch pat-diag"            style="--pat-c:#C4704F"><figcaption>Купон «Гирлянда»</figcaption></figure>
+            <figure class="swatch pat-dots"            style="--pat-c:#7C6D9C"><figcaption>Хлопок «Mini»</figcaption></figure>
+            <span class="hero-chip hero-chip--a">✂ Качественная прокраска</span>
+            <span class="hero-chip hero-chip--b">★ Хит продаж</span>
+          </div>
+        </article>
+
+        <article class="hero-slide">
+          <div class="hero-slide__content">
+            <p class="eyebrow">Успейте купить</p>
+            <h2 class="hero-slide__title">Распродажа <em>до −50%</em> на материалы</h2>
+            <p class="hero-slide__text">Флис, фланель и мех для гномов по сниженным ценам. Количество отрезов ограничено.</p>
+            <div class="hero-slide__cta">
+              <a href="#products" class="btn btn--primary">К распродаже
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+            </div>
+            <dl class="hero-slide__stats">
+              <div><dt>−50%</dt><dd>максимум скидки</dd></div>
+              <div><dt>200+</dt><dd>товаров со скидкой</dd></div>
+              <div><dt>еженедельно</dt><dd>новые позиции</dd></div>
+            </dl>
+          </div>
+          <div class="hero-slide__art">
+            <figure class="swatch pat-cross is-tall" style="--pat-c:#8A9B6E"><figcaption>Флис «Зелёный»</figcaption></figure>
+            <figure class="swatch pat-stripes"       style="--pat-c:#7C6D9C"><figcaption>Микровельвет</figcaption></figure>
+            <figure class="swatch pat-gingham"       style="--pat-c:#C4704F"><figcaption>Фланель «Лиловый беж»</figcaption></figure>
+            <span class="hero-chip hero-chip--a">🔥 Цены снижены</span>
+            <span class="hero-chip hero-chip--b">✓ Отрезы от 40 ₽</span>
+          </div>
+        </article>
+
+        <div class="hero__dots" role="tablist" aria-label="Слайды">
+          <button type="button" role="tab" aria-selected="true"  aria-label="Слайд 1"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Слайд 2"></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Слайд 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Категории
+  ============================================================ -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Каталог</p>
+          <h2>Что вы найдёте в лавке</h2>
+        </div>
+        <a href="#" class="link-arrow">Весь каталог
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="cat-grid">
+        <a href="#" class="cat-card reveal">
+          <span class="cat-card__swatch pat-dots"    style="--pat-c:#C4704F"></span>
+          <span class="cat-card__body"><strong>Коллекционные ткани</strong><small>хлопок · постеры · лён</small></span>
+          <span class="cat-card__count">620</span>
+        </a>
+        <a href="#" class="cat-card reveal">
+          <span class="cat-card__swatch pat-scallop" style="--pat-c:#D9A08B"></span>
+          <span class="cat-card__body"><strong>Ткани для тела</strong><small>скульптурный хлопок · парусина</small></span>
+          <span class="cat-card__count">85</span>
+        </a>
+        <a href="#" class="cat-card reveal">
+          <span class="cat-card__swatch pat-stripes" style="--pat-c:#7C6D9C"></span>
+          <span class="cat-card__body"><strong>Ткани для одежды</strong><small>батист · велюр · трикотаж</small></span>
+          <span class="cat-card__count">940</span>
+        </a>
+        <a href="#" class="cat-card reveal">
+          <span class="cat-card__swatch pat-gingham" style="--pat-c:#8A9B6E"></span>
+          <span class="cat-card__body"><strong>Наборы тканей</strong><small>подборки для проектов</small></span>
+          <span class="cat-card__count">120</span>
+        </a>
+        <a href="#" class="cat-card reveal">
+          <span class="cat-card__swatch pat-cross"   style="--pat-c:#B99B6B"></span>
+          <span class="cat-card__body"><strong>Фурнитура</strong><small>шплинты · глазки · пуговицы</small></span>
+          <span class="cat-card__count">310</span>
+        </a>
+        <a href="#" class="cat-card reveal">
+          <span class="cat-card__swatch pat-diag"    style="--pat-c:#6E8FA3"></span>
+          <span class="cat-card__body"><strong>Лён для дома</strong><small>полотно · панели · купоны</small></span>
+          <span class="cat-card__count">175</span>
+        </a>
+        <a href="#" class="cat-card reveal">
+          <span class="cat-card__swatch pat-grid"    style="--pat-c:#A3B48C"></span>
+          <span class="cat-card__body"><strong>Пряжа и нитки</strong><small>мулине · трессы · шерсть</small></span>
+          <span class="cat-card__count">240</span>
+        </a>
+        <a href="#" class="cat-card cat-card--sale reveal">
+          <span class="cat-card__swatch pat-stripes" style="--pat-c:#B4543A"></span>
+          <span class="cat-card__body"><strong>Распродажа</strong><small>цены до −50%</small></span>
+          <span class="cat-card__count">−50%</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Преимущества
+  ============================================================ -->
+  <section class="section section--tight">
+    <div class="container">
+      <ul class="usp-grid">
+        <li class="usp reveal">
+          <span class="usp__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg></span>
+          <div><strong>Доставка по России</strong><span>СДЭК, 5Post, Почта РФ, курьер по Москве</span></div>
+        </li>
+        <li class="usp reveal">
+          <span class="usp__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10.5h18M7 15h4"/></svg></span>
+          <div><strong>Оплата онлайн</strong><span>картой на сайте — без комиссии</span></div>
+        </li>
+        <li class="usp reveal">
+          <span class="usp__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
+          <div><strong>Проверенное качество</strong><span>тестируем каждую партию ткани</span></div>
+        </li>
+        <li class="usp reveal">
+          <span class="usp__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 3l3 2-3 2M8 21v-4M8 21l-3-2 3-2"/><path d="M7 9c2-3.5 8-3.5 10 0 1.5 2.8-.5 6-5 6s-6.5-3.2-5-6Z"/></svg></span>
+          <div><strong>Свой бренд тканей</strong><span>авторские коллекции ЛавкаДоллс с 2018</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Товары — табы Новинки / Скидки / Рекомендуем
+  ============================================================ -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Приятного выбора!</p>
+          <h2>Популярное в лавке</h2>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Подборки товаров">
+          <button class="tab is-active" role="tab" aria-selected="true"  data-tab="new"  type="button">Новинки</button>
+          <button class="tab"           role="tab" aria-selected="false" data-tab="sale"  type="button">Скидки</button>
+          <button class="tab"           role="tab" aria-selected="false" data-tab="best"  type="button">Рекомендуем</button>
+        </div>
+      </div>
+
+      <!-- Новинки -->
+      <div class="tab-panel is-active" data-panel="new">
+        <div class="row-wrapper">
+          <div class="product-row" role="list">
+            <article class="product-card reveal" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--new">Новинка!</span>
+                <span class="pat-dots product-card__pat" style="--pat-c:#C4704F"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Набор хлопок 6 отрезов 35×50 см «Осенняя гамма»</a></h3>
+              <p class="product-card__note">Тёплая палитра для осенних проектов</p>
+              <div class="product-card__footer">
+                <span class="price">1 000 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+
+            <article class="product-card reveal" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--new">Новинка!</span>
+                <span class="pat-scallop product-card__pat" style="--pat-c:#8A9B6E"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Лён натур. коллекция «Прованс ч.3» купон 44×57 см</a></h3>
+              <p class="product-card__note">Купон «Ресторанное меню»</p>
+              <div class="product-card__footer">
+                <span class="price"><s>260 ₽</s> 210 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+
+            <article class="product-card reveal" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--new">Новинка!</span>
+                <span class="pat-diag product-card__pat" style="--pat-c:#B99B6B"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Хлопок коллекция «Апрель 2026», розы барокко</a></h3>
+              <p class="product-card__note">Тонкая, хорошо драпируется</p>
+              <div class="product-card__footer">
+                <span class="price">от 120 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+
+            <article class="product-card reveal" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--new">Новинка!</span>
+                <span class="pat-gingham product-card__pat" style="--pat-c:#7C6D9C"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Купон бирки тканевые для рукоделия, арт. 9752</a></h3>
+              <p class="product-card__note">Готовые бирки — пришьи и готово</p>
+              <div class="product-card__footer">
+                <span class="price">от 90 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+          </div>
+          <button class="row-arrow row-arrow--prev" type="button" aria-label="Назад">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m15 6-6 6 6 6"/></svg>
+          </button>
+          <button class="row-arrow row-arrow--next" type="button" aria-label="Вперёд">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Скидки -->
+      <div class="tab-panel" data-panel="sale" hidden>
+        <div class="row-wrapper">
+          <div class="product-row" role="list">
+            <article class="product-card" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--sale">−24%</span>
+                <span class="pat-scallop product-card__pat" style="--pat-c:#D9CDBF"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Мех для гномов, ворс 8 см, цвет белый</a></h3>
+              <p class="product-card__note">Мягкий ворс для бород и шапочек</p>
+              <div class="product-card__footer">
+                <span class="price"><s>220 ₽</s> 168 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--sale">−50%</span>
+                <span class="pat-cross product-card__pat" style="--pat-c:#8A9B6E"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Флис однотонный 40×50 см, цвет зелёный</a></h3>
+              <p class="product-card__note">Для тельц и уютных деталей</p>
+              <div class="product-card__footer">
+                <span class="price"><s>80 ₽</s> 40 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--sale">−19%</span>
+                <span class="pat-stripes product-card__pat" style="--pat-c:#B99B6B"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Лён «Прованс ч.3» купон 44×57 см, «Меню»</a></h3>
+              <p class="product-card__note">Натуральный лён, печать по ткани</p>
+              <div class="product-card__footer">
+                <span class="price"><s>260 ₽</s> 210 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--sale">−21%</span>
+                <span class="pat-dots product-card__pat" style="--pat-c:#A3B48C"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Наполнитель синтепух в/с, упаковка 100 г</a></h3>
+              <p class="product-card__note">Упругий, не сбивается</p>
+              <div class="product-card__footer">
+                <span class="price"><s>140 ₽</s> 110 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+          </div>
+          <button class="row-arrow row-arrow--prev" type="button" aria-label="Назад">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m15 6-6 6 6 6"/></svg>
+          </button>
+          <button class="row-arrow row-arrow--next" type="button" aria-label="Вперёд">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Рекомендуем -->
+      <div class="tab-panel" data-panel="best" hidden>
+        <div class="row-wrapper">
+          <div class="product-row" role="list">
+            <article class="product-card" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--hit">Хит</span>
+                <span class="pat-grid product-card__pat" style="--pat-c:#6E8FA3"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Трикотаж De Witte Engel «Белый Ангел», тон 114</a></h3>
+              <p class="product-card__note">Классика для кукольной кожи</p>
+              <div class="product-card__footer">
+                <span class="price">690 ₽ … 2 600 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--hit">Хит</span>
+                <span class="pat-dots product-card__pat" style="--pat-c:#C4704F"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Парусина — скульптурный хлопок для кукол</a></h3>
+              <p class="product-card__note">Держит форму, идеальна для тела</p>
+              <div class="product-card__footer">
+                <span class="price">120 ₽ … 960 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--hit">Хит</span>
+                <span class="pat-gingham product-card__pat" style="--pat-c:#B99B6B"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Набор фланели 6 отрезов 36×50 см, гамма Nature 1</a></h3>
+              <p class="product-card__note">Пушистая, приятная к телу</p>
+              <div class="product-card__footer">
+                <span class="price">780 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <div class="product-card__media">
+                <span class="badge badge--hit">Хит</span>
+                <span class="pat-scallop product-card__pat" style="--pat-c:#7C6D9C"></span>
+                <button class="fav-toggle" type="button" aria-label="В избранное">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.7-9.3-9.1C1.5 7.9 3.5 4.9 6.6 4.9c2 0 3.6 1.1 4.4 2.7.8-1.6 2.4-2.7 4.4-2.7 3.1 0 5.1 3 3.9 6-1.8 4.4-9.3 9.1-9.3 9.1Z"/></svg>
+                </button>
+              </div>
+              <h3 class="product-card__title"><a href="#">Лён «Holiday calendar», купон для гирлянды 27×145 см</a></h3>
+              <p class="product-card__note">14 двусторонних флажков</p>
+              <div class="product-card__footer">
+                <span class="price">630 ₽</span>
+                <button class="btn btn--primary btn--sm add-to-cart" type="button">В корзину</button>
+              </div>
+            </article>
+          </div>
+          <button class="row-arrow row-arrow--prev" type="button" aria-label="Назад">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m15 6-6 6 6 6"/></svg>
+          </button>
+          <button class="row-arrow row-arrow--next" type="button" aria-label="Вперёд">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Промо-баннеры
+  ============================================================ -->
+  <section class="section section--tight">
+    <div class="container promo-grid">
+      <a href="#" class="promo promo--sale reveal">
+        <span class="pat-diag promo__pat" style="--pat-c:#B4543A" aria-hidden="true"></span>
+        <span class="promo__body">
+          <strong>Распродажа до −50%</strong>
+          <span>флис, фланель, мех для гномов</span>
+          <em>Количество отрезов ограничено →</em>
+        </span>
+      </a>
+      <a href="#" class="promo promo--kits reveal">
+        <span class="pat-gingham promo__pat" style="--pat-c:#8A9B6E" aria-hidden="true"></span>
+        <span class="promo__body">
+          <strong>Наборы тканей</strong>
+          <span>для авторских проектов и мастерских</span>
+          <em>Приглашаем к сотрудничеству →</em>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Отзывы
+  ============================================================ -->
+  <section class="section section--muted" id="reviews">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Отзывы</p>
+          <h2>Что говорят мастерицы</h2>
+        </div>
+        <div class="section-head__rating">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span>4.9 из 5 · 3 800+ отзывов</span>
+        </div>
+      </div>
+
+      <div class="row-wrapper">
+        <div class="review-row" id="reviewRow">
+          <blockquote class="review-card">
+            <p>«Отличный бархат! Такой тонкий, что удивительно для ткани, которая казалось бы может быть только плотной. Спасибо команде любимого магазина за качественный товар!»</p>
+            <footer><cite>Шипунова Наталья</cite><span>бархат «Бежевый» · 14 июня</span></footer>
+          </blockquote>
+          <blockquote class="review-card">
+            <p>«Тоненькая нежная, фактурная тканька — отлично подошла для моей куколки ростом 22 см».</p>
+            <footer><cite>Плотникова Марина</cite><span>хлопок купон «Принцесса» · 13 июня</span></footer>
+          </blockquote>
+          <blockquote class="review-card">
+            <p>«У Вас волшебный магазин! Долго не решалась совершить покупку, а теперь меня не остановить: заказала корзину на 35 товаров. Теперь это мой любимый магазин!»</p>
+            <footer><cite>Иванова Надежда</cite><span>постер купон · 21 апреля</span></footer>
+          </blockquote>
+          <blockquote class="review-card">
+            <p>«Много лет люблю этот магазин. Карточка товара оформлена так, что в голове сразу возникают образы платьев и юбочек для моих кукол».</p>
+            <footer><cite>Калмыкова Руслана</cite><span>хлопок «Mini» · 4 апреля</span></footer>
+          </blockquote>
+          <blockquote class="review-card">
+            <p>«Очень довольна бирочками — замечательно смотрятся, придают изделию желаемую тематику и законченный интересный вид. Спасибо за большой выбор!»</p>
+            <footer><cite>Каткова-Жукоцкая Ольга</cite><span>бирки тканевые · 12 июня</span></footer>
+          </blockquote>
+          <blockquote class="review-card">
+            <p>«Ткани супер! Отличная ткань — тонкая, шить одно удовольствие».</p>
+            <footer><cite>Пименова Наталья</cite><span>хлопок «Апрель» · 8 июня</span></footer>
+          </blockquote>
+        </div>
+        <button class="row-arrow row-arrow--prev" type="button" aria-label="Назад" data-scroll="#reviewRow" data-dir="-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m15 6-6 6 6 6"/></svg>
+        </button>
+        <button class="row-arrow row-arrow--next" type="button" aria-label="Вперёд" data-scroll="#reviewRow" data-dir="1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       О магазине
+  ============================================================ -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about__text reveal">
+        <p class="eyebrow">О лавке</p>
+        <h2>Добро пожаловать в мир творчества!</h2>
+        <p>С 2013 года мы тщательно подбираем материалы для авторских кукол и игрушек: тестируем каждую партию ткани, следим за трендами мира ручной работы и предлагаем мастерицам самое красивое и качественное.</p>
+        <p>С 2018 года создаём <strong>собственные авторские ткани под маркой ЛавкаДоллс</strong> — и сами выводим на рынок России новые фактуры. В ассортименте — натуральные ткани для рукоделия и лён для домашнего текстиля.</p>
+        <ul class="about__list">
+          <li>Сотрудничаем с лучшими мастерами и онлайн-школами</li>
+          <li>Каждая коллекция — от эскиза до печати по ткани</li>
+          <li>Поддержка и советы по материалам до и после покупки</li>
+        </ul>
+      </div>
+      <div class="about__art reveal" aria-hidden="true">
+        <figure class="swatch pat-stripes is-big" style="--pat-c:#C4704F"></figure>
+        <figure class="swatch pat-dots" style="--pat-c:#8A9B6E"></figure>
+        <figure class="swatch pat-gingham" style="--pat-c:#B99B6B"></figure>
+        <span class="about__stamp">с 2013<br>года</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Доставка и оплата
+  ============================================================ -->
+  <section class="section section--tight" id="delivery">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Доставка и оплата</p>
+          <h2>Заказ доедет быстро и безопасно</h2>
+        </div>
+      </div>
+      <div class="delivery-grid">
+        <article class="delivery-card reveal">
+          <span class="delivery-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>
+          </span>
+          <h3>Доставка по России</h3>
+          <p>Курьером по Москве, до пунктов выдачи СДЭК и 5Post, почтой России. Отправка в день оплаты.</p>
+        </article>
+        <article class="delivery-card reveal">
+          <span class="delivery-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10.5h18M7 15h4"/></svg>
+          </span>
+          <h3>Оплата онлайн</h3>
+          <p>Ссылка на оплату приходит после оформления. Банковской картой на сайте — без комиссии.</p>
+        </article>
+        <article class="delivery-card reveal">
+          <span class="delivery-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 1 1-4.6-7.6"/><path d="M9.5 11.5h5m-5 3h3"/><path d="M14 3.5v4h4"/></svg>
+          </span>
+          <h3>Вопрос-ответ</h3>
+          <p>Поможем подобрать ткань под ваш проект и ответим на вопросы. Пишите в ВК или на почту — отвечаем в день обращения.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Подписка
+  ============================================================ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="newsletter reveal">
+        <div class="newsletter__text">
+          <h2>Письма о новинках и коллекциях</h2>
+          <p>Раз в неделю: новые поступления, закрытые распродажи и идеи проектов. Без спама.</p>
+        </div>
+        <form class="newsletter__form" action="#" method="post">
+          <input type="email" name="email" placeholder="Ваш e-mail" aria-label="E-mail" required>
+          <button class="btn btn--primary" type="submit">Подписаться</button>
+          <label class="newsletter__agree">
+            <input type="checkbox" checked required>
+            <span>Принимаю условия политики обработки персональных данных</span>
+          </label>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     Подвал
+============================================================ -->
+<footer class="footer" id="faq">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="logo logo--light" href="#" aria-label="Лавка.Доллс">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="6.5" r="2.6"/><circle cx="6.5" cy="17.5" r="2.6"/><path d="M8.8 8.3 19 19M19 5 8.8 15.7"/></svg>
+        </span>
+        <span class="logo__text"><span class="logo__name">Лавка<em>.Доллс</em></span><small>ткани для рукоделия</small></span>
+      </a>
+      <p>Материалы для создания авторских кукол и игрушек ручной работы. Москва, отправляем по всей России.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="ВКонтакте">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 17c-5 0-8.4-3.5-8.5-9.3h2.6c.1 4.3 2 6.1 3.5 6.5V7.7h2.5v3.7c1.5-.2 3-1.8 3.5-3.7h2.5a7 7 0 0 1-3.2 4.6 7.3 7.3 0 0 1 3.8 4.7h-2.7a4.5 4.5 0 0 0-3.9-3.2V17z"/></svg>
+        </a>
+        <a href="#" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.7 4.6 3.6 11.2c-.9.4-.9 1 0 1.3l4.2 1.3 1.6 5c.2.6.6.7 1.1.3l2.3-2.2 4.4 3.2c.6.4 1.2.2 1.4-.6l3-13c.2-1-.4-1.5-.9-1.2zM9 13.2l8.5-5.3c.4-.2.5 0 .3.3l-6.7 6.1-.3 3-1.8-4.1z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <nav class="footer__col" aria-label="Каталог">
+      <h3>Каталог</h3>
+      <a href="#">Коллекционные ткани</a>
+      <a href="#">Ткани для тела</a>
+      <a href="#">Ткани для одежды</a>
+      <a href="#">Наборы тканей</a>
+      <a href="#">Фурнитура и инструменты</a>
+      <a href="#" class="is-sale">Распродажа</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Покупателям">
+      <h3>Покупателям</h3>
+      <a href="#delivery">Доставка</a>
+      <a href="#">Оплата</a>
+      <a href="#faq">Вопрос-ответ</a>
+      <a href="#reviews">Отзывы покупателей</a>
+      <a href="#">Политика персональных данных</a>
+    </nav>
+
+    <div class="footer__col footer__contacts">
+      <h3>Контакты</h3>
+      <a class="footer__phone" href="tel:+74959795332">+7 (495) 979-53-32</a>
+      <a href="mailto:9795332@bk.ru">9795332@bk.ru</a>
+      <p>пн–пт, 10:00–18:00 · Москва</p>
+      <div class="footer__pays" aria-label="Способы оплаты">
+        <span>Мир</span><span>Visa</span><span>MC</span><span>СБП</span>
+      </div>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>2026 © Лавка.Доллс — все права защищены</p>
+    <p>Сайт-прототип: дизайн главной страницы</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 19V5m-6 6 6-6 6 6"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
